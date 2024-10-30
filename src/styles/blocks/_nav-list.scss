@@ -1,0 +1,31 @@
+@use "../tools" as t;
+
+.nav-list {
+  counter-reset: counter -1;
+  display: grid;
+  align-items: center;
+  grid-auto-flow: column;
+  gap: 48px;
+
+  &__item {
+    counter-increment: counter 1;
+  }
+
+  &__item:not(&__item:first-child)::marker {
+    content: counter(counter, decimal-leading-zero);
+    font-family: var(--font-family), sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.17em;
+    color: #fff;
+  }
+
+  &__link {
+    font-family: var(--font-family), sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    color: #fff;
+    text-transform: uppercase;
+  }
+}

@@ -8,6 +8,10 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
   column-gap: 16px;
 
+  &__header {
+    block-size: 88px;
+  }
+
   &__header,
   &__main {
     grid-column: 1 / -1;
@@ -17,6 +21,10 @@
     & {
       padding: 0 40px;
       grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
+
+    &__header {
+      block-size: 96px;
     }
 
     &__main {

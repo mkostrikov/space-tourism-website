@@ -1,13 +1,13 @@
 @use "../tools" as t;
 
 .header {
-  padding: 24px 0;
   display: grid;
-  grid-auto-flow: column;
-  align-items: center;
-  justify-content: space-between;
+  grid-template-columns: subgrid;
 
   &__logo {
+    grid-row: 1;
+    grid-column: 1 / span 1;
+    align-self: center;
     block-size: 40px;
     inline-size: 40px;
     background-image: url('data:image/svg+xml,<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 40c11.046 0 20-8.954 20-20S31.046 0 20 0 0 8.954 0 20s8.954 20 20 20Zm0 0s0-20 20-20C20 20 20 0 20 0s0 20-20 20c19.648.143 20 20 20 20Z" fill="%23fff"/></svg>');
@@ -21,6 +21,10 @@
   }
 
   &__menu {
+    grid-row: 1;
+    grid-column: 2 / -1;
+    justify-self: end;
+    align-self: center;
     inline-size: 24px;
     block-size: 22px;
     background-color: transparent;
@@ -30,12 +34,23 @@
   }
 
   @include t.breakpoint(m) {
+    & {
+      block-size: 96px;
+    }
+
     &__menu {
       display: none;
     }
 
     &__nav {
-      display: block;
+      grid-row: 1;
+      grid-column: 2 / -1;
+      display: grid;
+      justify-items: end;
+      backdrop-filter: blur(80px);
+      background: rgba(255, 255, 255, 0.05);
+      margin: 0 -40px 0 0;
+      padding: 0 40px 0 0;
     }
 
     &__logo {
@@ -44,9 +59,26 @@
     }
   }
 
-  @include t.breakpoint(m) {
+  @include t.breakpoint(xl) {
     & {
-      padding: 64px 0 24px;
+      padding: 40px 0 0;
+      block-size: 136px;
+    }
+
+    &::after {
+      content: '';
+      grid-column: 2 / span 4;
+      grid-row: 1;
+      block-size: 1px;
+      background-color: rgba(255, 255, 255, 0.25);
+      align-self: center;
+      margin: 0 0 0 -48px;
+    }
+
+    &__nav {
+      grid-column: 6 / -1;
+      margin: 0 -165px 0 0;
+      padding: 0 165px 0 0;
     }
   }
 }
