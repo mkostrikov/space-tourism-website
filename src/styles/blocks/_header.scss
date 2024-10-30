@@ -1,0 +1,52 @@
+@use "../tools" as t;
+
+.header {
+  padding: 24px 0;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    block-size: 40px;
+    inline-size: 40px;
+    background-image: url('data:image/svg+xml,<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 40c11.046 0 20-8.954 20-20S31.046 0 20 0 0 8.954 0 20s8.954 20 20 20Zm0 0s0-20 20-20C20 20 20 0 20 0s0 20-20 20c19.648.143 20 20 20 20Z" fill="%23fff"/></svg>');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  &__nav {
+    display: none;
+  }
+
+  &__menu {
+    inline-size: 24px;
+    block-size: 22px;
+    background-color: transparent;
+    background-image: url('data:image/svg+xml,<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 22"><path fill="%23D0D6F9" d="M0 .5h24v3H0zM0 9.5h24v3H0zM0 18.5h24v3H0z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include t.breakpoint(m) {
+    &__menu {
+      display: none;
+    }
+
+    &__nav {
+      display: block;
+    }
+
+    &__logo {
+      block-size: 48px;
+      inline-size: 48px;
+    }
+  }
+
+  @include t.breakpoint(m) {
+    & {
+      padding: 64px 0 24px;
+    }
+  }
+}

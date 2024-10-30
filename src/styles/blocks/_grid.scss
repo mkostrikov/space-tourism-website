@@ -1,0 +1,39 @@
+@use "../tools" as t;
+
+.grid {
+  max-inline-size: 1920px;
+  margin-inline: auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 16px;
+
+  &__header,
+  &__main {
+    grid-column: 1 / -1;
+  }
+
+  @include t.breakpoint(m) {
+    & {
+      padding: 0 40px;
+      grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
+
+    &__main {
+      grid-column: 2 / span 6;
+    }
+  }
+
+  @include t.breakpoint(xl) {
+    & {
+      padding: 0 165px;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      column-gap: 30px;
+    }
+
+    &__main {
+      grid-column: 1 / -1;
+      grid-template-rows: 632px;
+    }
+  }
+}

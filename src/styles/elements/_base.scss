@@ -1,0 +1,28 @@
+@use "../tools" as t;
+
+:root {
+  --font-family: "Barlow Condensed";
+  --second-family: "Bellefair";
+  --third-family: "Barlow";
+}
+
+img {
+  max-inline-size: 100%;
+  vertical-align: bottom;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+dialog {
+  min-width: 100%;
+  max-height: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}

@@ -1,0 +1,28 @@
+@use "../tools" as t;
+
+.home-page {
+  min-block-size: 100dvh;
+  background-color: #0b0d17;
+  background: url("/src/assets/images/mobile-home.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+
+  @include t.breakpoint(m) {
+    & {
+      background: url("/src/assets/images/tablet-home.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  @include t.breakpoint(xl) {
+    & {
+      background: url("/src/assets/images/desktop-home.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+}
