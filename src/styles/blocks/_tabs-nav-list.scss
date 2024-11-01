@@ -1,0 +1,7 @@
+@use "../tools" as t;
+
+.tabs-nav-list {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 32px;
+}

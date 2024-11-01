@@ -13,27 +13,87 @@
     <script type="module" src="../src/scripts/main.js"></script>
   </head>
   <body>
-  <div class="page page--destination">
-    <header class="header page__header grid">
-      <div class="header__logo logo"></div>
-      <nav class="header__nav">
-        <ul class="nav-list">
-          <li class="nav-list__item">
-            <a href="/" class="nav-list__link">home</a>
-          </li>
-          <li class="nav-list__item">
-            <a href="destination/" class="nav-list__link">destination</a>
-          </li>
-          <li class="nav-list__item">
-            <a href="/cres/" class="nav-list__link">crew</a>
-          </li>
-          <li class="nav-list__item">
-            <a href="/technology/" class="nav-list__link">technology</a>
-          </li>
-        </ul>
-      </nav>
-      <button class="header__menu"></button>
-    </header>
-  </div>
+    <div class="page page--destination">
+      <header class="header page__header grid">
+        <div class="header__logo logo"></div>
+        <nav class="header__nav">
+          <ul class="main-nav">
+            <li class="main-nav__item">
+              <a href="/" class="main-nav__link">home</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="destination/" class="main-nav__link">destination</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="/cres/" class="main-nav__link">crew</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="/technology/" class="main-nav__link">technology</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="header__menu"></button>
+      </header>
+      <main>
+        <section class="destination">
+          <header class="destination__header">
+            <h1 class="destination__headline">pick your destination</h1>
+          </header>
+          <div class="destination__content">
+            <div class="tabs">
+              <nav class="tabs__nav">
+                <ul class="tabs-nav-list">
+                  <li class="tabs-nav-list__item">
+                    <a href="#" class="tabs-nav-list__link">moon</a>
+                  </li>
+                  <li>
+                    <a href="#">mars</a>
+                  </li>
+                  <li>
+                    <a href="#">europa</a>
+                  </li>
+                  <li>
+                    <a href="#">titan</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="tabs__content">
+                <article class="tab">
+                  <div class="tab__img">
+                    <img
+                      src="../src/assets/images/mobile-destination-a-moon.webp"
+                      alt=""
+                      width="151"
+                      height="151"
+                    />
+                  </div>
+                  <div class="tab__content">
+                    <div class="tab__header">
+                      <h2 class="tab__headline">moon</h2>
+                      <p class="tab__description">
+                        See our planet as you’ve never seen it before. A perfect
+                        relaxing trip away to help regain perspective and come
+                        back refreshed. While you’re there, take in some history
+                        by visiting the Luna 2 and Apollo 11 landing sites.
+                      </p>
+                    </div>
+                    <div class="tab__info">
+                      <p class="info">
+                        <span class="info__title">avg. distance</span>
+                        <span class="info__value">384,400 km</span>
+                      </p>
+                      <p class="info">
+                        <span class="info__title">est. travel time</span>
+                        <span class="info__value">3 days</span>
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>

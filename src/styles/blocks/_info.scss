@@ -1,0 +1,24 @@
+@use "../tools" as t;
+
+.info {
+  display: grid;
+  gap: 12px;
+  text-align: center;
+
+  &__title {
+    font-family: var(--font-family), sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #d0d6f9;
+  }
+
+  &__value {
+    font-family: var(--second-family), sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+}

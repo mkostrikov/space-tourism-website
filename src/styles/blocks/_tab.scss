@@ -1,0 +1,63 @@
+@use "../tools" as t;
+
+.tab {
+  display: grid;
+  justify-items: center;
+  gap: 88px;
+
+  &__img {
+    padding: 26px 0;
+  }
+
+  &__img > img {
+    inline-size: 150px;
+    block-size: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  &__content {
+    display: grid;
+    gap: 24px;
+  }
+
+  &__header {
+    display: grid;
+    gap: 16px;
+    text-align: center;
+  }
+
+  &__content::after {
+    grid-row: 2;
+    content: "";
+    padding: 1px 0;
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.25),
+      rgba(255, 255, 255, 0.25)
+    );
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__headline {
+    font-family: var(--second-family), sans-serif;
+    font-weight: 400;
+    font-size: 56px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    font-family: var(--third-family), sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #d0d6f9;
+  }
+
+  &__info {
+    display: grid;
+    gap: 24px;
+  }
+}

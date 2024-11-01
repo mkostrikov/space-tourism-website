@@ -1,0 +1,68 @@
+@use "../tools" as t;
+
+.main-nav {
+  counter-reset: counter -1;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 48px;
+
+  &__item {
+    counter-increment: counter 1;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: minmax(0, 1fr) 3px;
+    column-gap: 12px;
+    align-items: center;
+  }
+
+  &__item::before {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    content: counter(counter, decimal-leading-zero);
+    font-family: var(--font-family), sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.17em;
+    color: #fff;
+  }
+
+  &__item::after {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    content: "";
+    block-size: 3px;
+    background: linear-gradient(#fff, #fff);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 0% 100%;
+    transition: background-size 300ms;
+  }
+
+  &__item--active::after {
+    background-size: 100% 100%;
+  }
+
+  &__link {
+    grid-column: 2;
+    grid-row: 1 / -1;
+    font-family: var(--font-family), sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  &__link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+
+  @media (hover: hover) {
+    &__item:hover::after {
+      background-size: 100% 100%;
+    }
+  }
+}
