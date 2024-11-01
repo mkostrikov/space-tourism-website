@@ -4,6 +4,8 @@
     <title>Space tourism</title>
     <meta charset="utf-8" />
 
+    <base href="/space-tourism-website/" target="_self" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="space tourism website" />
 
@@ -12,42 +14,48 @@
     <link rel="stylesheet" href="./src/styles/main.scss" />
     <script type="module" src="./src/scripts/main.js"></script>
   </head>
-  <body class="home-page">
-    <div class="grid">
-      <header class="header grid__header">
-        <div class="header__logo"></div>
+  <body>
+    <div class="page">
+      <header class="header page__header grid">
+        <div class="header__logo logo"></div>
         <nav class="header__nav">
           <ul class="nav-list">
             <li class="nav-list__item">
               <a href="/" class="nav-list__link">home</a>
             </li>
             <li class="nav-list__item">
-              <a href="#" class="nav-list__link">destination</a>
+              <a href="destination/" class="nav-list__link">destination</a>
             </li>
             <li class="nav-list__item">
-              <a href="#" class="nav-list__link">crew</a>
+              <a href="/cres/" class="nav-list__link">crew</a>
             </li>
             <li class="nav-list__item">
-              <a href="#" class="nav-list__link">technology</a>
+              <a href="/technology/" class="nav-list__link">technology</a>
             </li>
           </ul>
         </nav>
         <button class="header__menu"></button>
       </header>
-      <main class="main grid__main">
-        <header class="main__header">
-          <h1 class="main__headline">
-            <span>so, you want to travel to</span>
-            <span>space</span>
-          </h1>
-          <p class="main__description">
-            Let’s face it; if you want to go to space, you might as well
-            genuinely go to outer space and not hover kind of on the edge of it.
-            Well sit back, and relax because we’ll give you a truly out of this
-            world experience!
-          </p>
-        </header>
-        <button class="main__btn">explore</button>
+      <main>
+        <section class="hero">
+          <div class="hero__container grid">
+            <header class="hero__header">
+              <h1 class="hero__headline">
+                <span>so, you want to travel to</span>
+                <span>space</span>
+              </h1>
+              <p class="hero__description">
+                Let’s face it; if you want to go to space, you might as well
+                genuinely go to outer space and not hover kind of on the edge of
+                it. Well sit back, and relax because we’ll give you a truly out
+                of this world experience!
+              </p>
+            </header>
+            <div class="hero__content">
+              <button class="hero__btn">explore</button>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   </body>

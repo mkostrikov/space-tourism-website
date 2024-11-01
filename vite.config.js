@@ -7,6 +7,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         home: join(dirname("."), "index.html"),
+        destination: join(dirname("."), "destination", "index.html"),
       },
     },
   },

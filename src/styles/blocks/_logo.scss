@@ -1,0 +1,10 @@
+@use "../tools" as t;
+
+.logo {
+  block-size: 40px;
+  inline-size: 40px;
+  background-image: url('data:image/svg+xml,<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 40c11.046 0 20-8.954 20-20S31.046 0 20 0 0 8.954 0 20s8.954 20 20 20Zm0 0s0-20 20-20C20 20 20 0 20 0s0 20-20 20c19.648.143 20 20 20 20Z" fill="%23fff"/></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}

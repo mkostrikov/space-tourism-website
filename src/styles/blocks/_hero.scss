@@ -1,0 +1,109 @@
+@use "../tools" as t;
+
+.hero {
+  &__container {
+    padding: 24px 0;
+  }
+
+  &__header {
+    grid-row: 1;
+    grid-column: 1 / -1;
+    display: grid;
+    justify-items: center;
+    gap: 24px;
+    text-align: center;
+  }
+
+  &__headline {
+    font-family: var(--font-family), sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.14em;
+    color: #d0d6f9;
+    text-transform: uppercase;
+    display: grid;
+    gap: 24px;
+  }
+
+  &__headline > span:last-of-type {
+    font-family: var(--second-family), sans-serif;
+    font-weight: 400;
+    font-size: 80px;
+    color: #fff;
+  }
+
+  &__description {
+    font-family: var(--third-family), sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #d0d6f9;
+    max-inline-size: 53ch;
+  }
+
+  &__content {
+    grid-column: 1 / -1;
+    padding: 119px 0;
+    display: grid;
+    justify-items: center;
+  }
+
+  &__btn {
+    border-radius: 100%;
+    block-size: 144px;
+    inline-size: 144px;
+    font-family: var(--second-family), sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #0b0d17;
+  }
+
+  @include t.breakpoint(m) {
+    &__container {
+      padding: 128px 0;
+      gap: 64px;
+    }
+
+    &__header {
+      grid-column: 2 / -2;
+    }
+
+    &__headline {
+      font-size: 28px;
+    }
+
+    &__headline > span:last-of-type {
+      font-size: 144px;
+    }
+
+    &__content {
+      padding: 0;
+    }
+
+    &__btn {
+      block-size: 272px;
+      inline-size: 272px;
+      font-size: 32px;
+    }
+  }
+
+  @include t.breakpoint(xl) {
+    &__container {
+      margin: 289px 0 0;
+      align-items: center;
+    }
+
+    &__header {
+      grid-column: 1 / span 6;
+      justify-items: start;
+      text-align: left;
+    }
+
+    &__content {
+      grid-row: 1;
+      grid-column: 6 / -1;
+      justify-self: end;
+    }
+  }
+}
