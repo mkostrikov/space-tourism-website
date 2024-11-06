@@ -1,0 +1,20 @@
+@use "../../tools" as t;
+
+.destination-page {
+  background-image: url("/src/assets/images/destination-page/mobile-destination.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+
+  @include t.breakpoint(l) {
+    & {
+      background-image: url("/src/assets/images/destination-page/tablet-destination.webp");
+    }
+  }
+
+  @include t.breakpoint(xl) {
+    & {
+      background-image: url("/src/assets/images/destination-page/desktop-destination.webp");
+    }
+  }
+}

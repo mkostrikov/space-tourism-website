@@ -2,50 +2,20 @@
 
 .page {
   padding: 0 24px;
+  min-block-size: 100dvh;
   max-inline-size: 1920px;
   margin-inline: auto;
-  min-block-size: 100dvh;
   background-color: #0b0d17;
-  background-image: url("/src/assets/images/mobile-home.webp");
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  background-size: 100%;
 
-  &__header {
-    block-size: 88px;
-  }
-
-  &--destination {
-    background-image: url("/src/assets/images/mobile-destination-a.webp");
-  }
-
-  @include t.breakpoint(m) {
+  @include t.breakpoint(l) {
     & {
       padding: 0 40px;
-      background-image: url("/src/assets/images/tablet-home.webp");
-    }
-
-    &__header {
-      block-size: 96px;
-    }
-
-    &--destination {
-      background-image: url("/src/assets/images/tablet-destination-a.webp");
     }
   }
 
   @include t.breakpoint(xl) {
     & {
       padding: 0 165px;
-      background-image: url("/src/assets/images/desktop-home.webp");
-    }
-
-    &__header {
-      block-size: 136px;
-    }
-
-    &--destination {
-      background-image: url("/src/assets/images/desktop-destination-a.webp");
     }
   }
 }

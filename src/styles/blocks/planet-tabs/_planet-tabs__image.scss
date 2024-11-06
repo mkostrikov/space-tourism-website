@@ -15,7 +15,7 @@
 
   @include t.breakpoint(m) {
     & {
-      padding: 0;
+      padding: 42px 0;
     }
 
     & img {
@@ -24,6 +24,10 @@
   }
 
   @include t.breakpoint(l) {
+    & {
+      padding: 0;
+    }
+
     & img {
       inline-size: min(100%, 480px);
     }

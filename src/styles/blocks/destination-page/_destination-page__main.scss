@@ -1,0 +1,29 @@
+@use "../../tools" as t;
+
+.destination-page__main {
+  padding: 24px 0;
+
+  & > section {
+    grid-column: 1 / -1;
+  }
+
+  @include t.breakpoint(m) {
+    & {
+      padding: 40px 0;
+    }
+
+    & > section {
+      grid-column: 2 / -2;
+    }
+  }
+
+  @include t.breakpoint(l) {
+    & {
+      padding: 48px 0;
+    }
+
+    & > section {
+      grid-column: 1 / -1;
+    }
+  }
+}
