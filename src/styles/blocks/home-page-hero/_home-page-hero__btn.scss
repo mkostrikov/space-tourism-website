@@ -1,0 +1,36 @@
+@use "../../tools" as t;
+
+.home-page-hero__btn {
+  block-size: 144px;
+  inline-size: 144px;
+  border-radius: 100%;
+  background-color: #fff;
+  font-family: var(--second-family), sans-serif;
+  font-weight: 400;
+  font-size: clamp(
+    t.rem(18),
+    0.8169014084507042rem + 1.3145539906103285vw,
+    t.rem(32)
+  );
+  text-transform: uppercase;
+  color: #0b0d17;
+  grid-column: 1 / -1;
+  margin: 119px 0;
+
+  @include t.breakpoint(m) {
+    & {
+      margin: 0;
+      block-size: 272px;
+      inline-size: 272px;
+    }
+  }
+
+  @include t.breakpoint(l) {
+    & {
+      grid-column: 6 / span 6;
+      grid-row: 1;
+      justify-self: end;
+
+    }
+  }
+}

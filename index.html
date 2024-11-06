@@ -15,16 +15,16 @@
     <script type="module" src="./src/scripts/main.js"></script>
   </head>
   <body>
-    <div class="page">
+    <div class="page home-page">
       <header class="header grid">
         <div class="header__logo"></div>
         <nav class="header__nav">
           <ul class="main-nav">
             <li class="main-nav__item">
-              <a href="../" class="main-nav__link">home</a>
+              <a href="./" class="main-nav__link">home</a>
             </li>
             <li class="main-nav__item">
-              <a href="." class="main-nav__link">destination</a>
+              <a href="./destination/" class="main-nav__link">destination</a>
             </li>
             <li class="main-nav__item">
               <a href="../crew/" class="main-nav__link">crew</a>
@@ -36,25 +36,21 @@
         </nav>
         <button class="header__menu"></button>
       </header>
-      <main>
-        <section class="hero">
-          <div class="hero__container grid">
-            <header class="hero__header">
-              <h1 class="hero__headline">
-                <span>so, you want to travel to</span>
-                <span>space</span>
-              </h1>
-              <p class="hero__description">
-                Let’s face it; if you want to go to space, you might as well
-                genuinely go to outer space and not hover kind of on the edge of
-                it. Well sit back, and relax because we’ll give you a truly out
-                of this world experience!
-              </p>
-            </header>
-            <div class="hero__content">
-              <button class="hero__btn">explore</button>
-            </div>
-          </div>
+      <main class="home-page__main">
+        <section class="home-page-hero grid">
+          <header class="home-page-hero__header">
+            <h1 class="home-page-hero__headline">
+              <span>so, you want to travel to</span>
+              <span>space</span>
+            </h1>
+            <p class="home-page-hero__description">
+              Let’s face it; if you want to go to space, you might as well
+              genuinely go to outer space and not hover kind of on the edge of
+              it. Well sit back, and relax because we’ll give you a truly out of
+              this world experience!
+            </p>
+          </header>
+          <button class="home-page-hero__btn">explore</button>
         </section>
       </main>
     </div>

@@ -1,0 +1,20 @@
+@use "../../tools" as t;
+
+.home-page {
+  background-image: url("/src/assets/images/home-page/mobile-home.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+
+  @include t.breakpoint(m) {
+    & {
+      background-image: url("/src/assets/images/home-page/tablet-home.webp");
+    }
+  }
+
+  @include t.breakpoint(l) {
+    & {
+      background-image: url("/src/assets/images/home-page/desktop-home.webp");
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use "../../tools" as t;
+
+.home-page-hero__header {
+  grid-column: 1 / -1;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 24px;
+
+  @include t.breakpoint(m) {
+    & {
+      grid-column: 2 / -2;
+    }
+  }
+
+  @include t.breakpoint(l) {
+    & {
+      grid-column: 1 / span 6;
+      grid-row: 1;
+      text-align: left;
+      justify-items: start;
+    }
+  }
+}

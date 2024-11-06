@@ -1,0 +1,18 @@
+@use "../../tools" as t;
+
+.home-page-hero {
+  align-items: center;
+  justify-items: center;
+
+  @include t.breakpoint(m) {
+    & {
+      gap: 64px;
+    }
+  }
+
+  @include t.breakpoint(l) {
+    & {
+      padding: 289px 0 0;
+    }
+  }
+}

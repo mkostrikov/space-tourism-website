@@ -1,0 +1,29 @@
+@use "../../tools" as t;
+
+.home-page-hero__headline {
+  text-transform: uppercase;
+  font-weight: 400;
+  display: grid;
+  gap: 24px;
+
+  & > span {
+    font-size: clamp(
+      t.rem(16),
+      0.7359154929577465rem + 1.1267605633802815vw,
+      t.rem(28)
+    );
+    font-family: var(--font-family), sans-serif;
+    letter-spacing: 0.14em;
+    color: #d0d6f9;
+  }
+
+  & > span:last-of-type {
+    font-family: var(--second-family), sans-serif;
+    font-size: clamp(
+      t.rem(80),
+      3.591549295774648rem + 6.009389671361502vw,
+      t.rem(144)
+    );
+    color: #fff;
+  }
+}

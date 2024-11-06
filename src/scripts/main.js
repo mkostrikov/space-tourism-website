@@ -1,3 +1,7 @@
 import tabs from "./tabs.js";
 
-tabs.init(document.querySelector(".js-tabs"));
+[...document.querySelectorAll(".js-tabs")].forEach((el) => {
+  if (el) {
+    tabs.init(el);
+  }
+});
