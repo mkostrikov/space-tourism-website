@@ -1,0 +1,18 @@
+@use "../../tools" as t;
+
+.destination-page-hero__tabs {
+  grid-column: 1 / -1;
+
+  @include t.breakpoint(m) {
+    & {
+      grid-column: 2 / -2;
+    }
+  }
+
+  @include t.breakpoint(l) {
+    & {
+      grid-column: 1 / -1;
+      padding: 127px 0;
+    }
+  }
+}

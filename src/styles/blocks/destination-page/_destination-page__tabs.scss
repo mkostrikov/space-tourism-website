@@ -1,7 +1,0 @@
-@use "../../tools" as t;
-
-.destination-page__tabs {
-  @include t.breakpoint(l) {
-    padding: 127px 0;
-  }
-}
