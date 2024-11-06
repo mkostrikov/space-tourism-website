@@ -9,9 +9,14 @@
   align-content: space-between;
 
   &::after {
+    --gradient-color: #fff;
     content: "";
     padding: 3px 0 0;
-    background: linear-gradient(#fff, #fff);
+    background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    );
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: 0 100%;
@@ -19,12 +24,13 @@
   }
 
   &[data-active="true"]::after {
+    background-image: linear-gradient(to right, #fff, #fff);
     background-size: 100% 100%;
   }
 
   @media (hover: hover) {
-    &:hover {
-      color: #fff;
+    &:hover::after {
+      background-size: 100% 100%;
     }
   }
 }

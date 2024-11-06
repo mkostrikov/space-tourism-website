@@ -1,6 +1,8 @@
 @use "../../tools" as t;
 
 .home-page-hero__btn {
+  --shadow-size: 24px;
+
   block-size: 144px;
   inline-size: 144px;
   border-radius: 100%;
@@ -19,6 +21,7 @@
 
   @include t.breakpoint(m) {
     & {
+      --shadow-size: 36px;
       margin: 0;
       block-size: 272px;
       inline-size: 272px;
@@ -30,7 +33,24 @@
       grid-column: 6 / span 6;
       grid-row: 1;
       justify-self: end;
+    }
+  }
 
+  @include t.breakpoint(xl) {
+    & {
+      --shadow-size: 88px;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 0 0 0 var(--shadow-size) rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      box-shadow: 0 0 0 var(--shadow-size) rgba(255, 255, 255, 0.1);
     }
   }
 }
