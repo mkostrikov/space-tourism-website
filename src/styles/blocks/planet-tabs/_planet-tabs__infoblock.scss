@@ -1,0 +1,12 @@
+@use "../../tools" as t;
+
+.planet-tabs__infoblock {
+  display: grid;
+  gap: 24px;
+
+  @include t.breakpoint(m) {
+    & {
+      grid-auto-flow: column;
+    }
+  }
+}

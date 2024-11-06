@@ -1,0 +1,22 @@
+@use "../../tools" as t;
+
+.planet-tabs__content {
+  grid-area: content;
+  display: grid;
+  align-items: start;
+  gap: 24px;
+
+  &::before {
+    grid-row: 2;
+    content: "";
+    padding: 1px 0 0;
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+
+  @include t.breakpoint(l) {
+    & {
+      padding: 0 48px;
+      gap: 48px;
+    }
+  }
+}

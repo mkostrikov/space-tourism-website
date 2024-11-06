@@ -1,0 +1,24 @@
+@use "../../tools" as t;
+
+.planet-tabs {
+  display: grid;
+  grid-template-rows: auto 32px 32px 24px auto;
+  grid-template-areas:
+    "image"
+    "..."
+    "nav"
+    "..."
+    "content";
+
+  @include t.breakpoint(l) {
+    & {
+      grid-template-areas:
+        "image nav"
+        "image content";
+      grid-template-rows: 32px auto;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      justify-items: start;
+      gap: 48px 32px;
+    }
+  }
+}

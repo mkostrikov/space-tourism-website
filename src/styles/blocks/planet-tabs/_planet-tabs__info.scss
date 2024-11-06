@@ -1,0 +1,29 @@
+@use "../../tools" as t;
+
+.planet-tabs__info {
+  display: grid;
+  gap: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+
+  & > span {
+    font-family: var(--second-family), sans-serif;
+
+    font-size: 28px;
+    color: #fff;
+  }
+
+  & > span:first-of-type {
+    font-family: var(--font-family), sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.14em;
+    color: #d0d6f9;
+  }
+
+  @include t.breakpoint(l) {
+    & {
+      text-align: left;
+    }
+  }
+}
