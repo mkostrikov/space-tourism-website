@@ -1,6 +1,6 @@
-@use "../../tools" as t;
+@use "../tools" as t;
 
-.destination-page__main {
+.main {
   padding: 24px 0;
 
   @include t.breakpoint(m) {
