@@ -1,0 +1,17 @@
+@use "../../tools" as t;
+
+.crew-tabs__nav-link {
+  block-size: 10px;
+  inline-size: 10px;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.25);
+
+  &[data-active="true"] {
+    background-color: #fff;
+  }
+
+  @include t.breakpoint(l) {
+    block-size: 16px;
+    inline-size: 16px;
+  }
+}

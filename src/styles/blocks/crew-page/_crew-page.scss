@@ -1,0 +1,20 @@
+@use "../../tools" as t;
+
+.crew-page {
+  background-image: url("/src/assets/images/crew-page/mobile-crew.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+
+  @include t.breakpoint(l) {
+    & {
+      background-image: url("/src/assets/images/crew-page/tablet-crew.webp");
+    }
+  }
+
+  @include t.breakpoint(xl) {
+    & {
+      background-image: url("/src/assets/images/crew-page/desktop-crew.webp");
+    }
+  }
+}

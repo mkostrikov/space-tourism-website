@@ -1,0 +1,16 @@
+@use "../../tools" as t;
+
+.crew-tabs__description {
+  font-family: var(--third-family), sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.8;
+  text-align: center;
+  color: #d0d6f9;
+
+  @include t.breakpoint(l) {
+    & {
+      text-align: left;
+    }
+  }
+}

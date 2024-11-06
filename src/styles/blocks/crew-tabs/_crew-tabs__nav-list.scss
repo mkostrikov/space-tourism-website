@@ -1,0 +1,15 @@
+@use "../../tools" as t;
+
+.crew-tabs__nav-list {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  @include t.breakpoint(l) {
+    & {
+      gap: 40px;
+    }
+  }
+}
