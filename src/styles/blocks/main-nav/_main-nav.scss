@@ -1,0 +1,6 @@
+.main-nav {
+  counter-reset: counter -1;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 48px;
+}

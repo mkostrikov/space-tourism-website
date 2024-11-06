@@ -1,0 +1,26 @@
+@use "../../tools" as t;
+
+.header__nav {
+  display: none;
+
+  @include t.breakpoint(m) {
+    & {
+      grid-column: 2 / -1;
+      grid-row: 1;
+      align-self: stretch;
+      margin: -24px 0;
+      display: grid;
+      justify-items: end;
+      backdrop-filter: blur(80px);
+      background: rgba(255, 255, 255, 0.05);
+    }
+  }
+
+  @include t.breakpoint(xl) {
+    & {
+      grid-column: 7 / -1;
+      margin: -24px -165px -24px -30px;
+      padding: 0 64px 0 0;
+    }
+  }
+}

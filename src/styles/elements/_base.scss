@@ -20,6 +20,10 @@ button {
   cursor: pointer;
 }
 
+button {
+  background-color: transparent;
+}
+
 dialog {
   min-width: 100%;
   max-height: 100%;
