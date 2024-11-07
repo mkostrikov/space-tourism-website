@@ -1,8 +1,0 @@
-@use "../../tools" as t;
-
-.crew-tabs__content {
-  grid-area: content;
-  display: grid;
-  align-content: center;
-  gap: 24px;
-}

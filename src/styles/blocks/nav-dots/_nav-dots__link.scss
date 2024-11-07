@@ -1,0 +1,19 @@
+@use "../../tools" as t;
+
+.nav-dots__link {
+  display: grid;
+  inline-size: 10px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  background-color: #fff;
+
+  &[data-active="false"] {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  @include t.breakpoint(l) {
+    & {
+      inline-size: 16px;
+    }
+  }
+}
