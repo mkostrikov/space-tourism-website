@@ -1,0 +1,24 @@
+@use "../../tools" as t;
+
+.crew-tabs-template {
+  display: grid;
+  grid-template-rows: auto 10px auto;
+  grid-template-areas:
+    "crew-card-header"
+    "nav"
+    "crew-card-image";
+  gap: 24px;
+
+  @include t.breakpoint(l) {
+    & {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: minmax(700px, 1fr) 16px 48px;
+      grid-template-areas:
+        "crew-card-header crew-card-image"
+        "nav crew-card-image"
+        "... crew-card-image";
+      row-gap: 0;
+      column-gap: 30px;
+    }
+  }
+}

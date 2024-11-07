@@ -1,0 +1,9 @@
+@use "../../tools" as t;
+
+.crew-card {
+  padding: 40px 0 0;
+
+  @include t.breakpoint(l) {
+    padding: 0;
+  }
+}

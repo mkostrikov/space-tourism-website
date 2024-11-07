@@ -1,0 +1,15 @@
+@use "../../tools" as t;
+
+.crew-card__header {
+  grid-area: crew-card-header;
+  text-align: center;
+  display: grid;
+  align-content: center;
+  gap: 24px;
+
+  @include t.breakpoint(l) {
+    & {
+      text-align: left;
+    }
+  }
+}

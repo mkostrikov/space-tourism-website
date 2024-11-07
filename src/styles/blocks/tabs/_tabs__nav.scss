@@ -1,0 +1,14 @@
+@use "../../tools" as t;
+
+.tabs__nav {
+  grid-area: nav;
+  z-index: 1;
+  color: #fff;
+  text-transform: uppercase;
+  display: grid;
+  justify-content: center;
+
+  @include t.breakpoint(l) {
+    justify-content: start;
+  }
+}

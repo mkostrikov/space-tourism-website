@@ -1,0 +1,28 @@
+@use "../../tools" as t;
+
+.crew-card__image-container {
+  grid-area: crew-card-image;
+  display: grid;
+  place-items: center;
+  mask-image: linear-gradient(
+    180deg,
+    #d9d9d9 77.39%,
+    rgba(217, 217, 217, 0) 100%
+  );
+  mask-repeat: no-repeat;
+  mask-position: bottom;
+  padding: 40px 0 0;
+
+  & img {
+    inline-size: 100%;
+    block-size: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  @include t.breakpoint(m) {
+    & {
+      padding: 64px 0 0;
+    }
+  }
+}

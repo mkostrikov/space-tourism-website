@@ -1,0 +1,21 @@
+@use "../../tools" as t;
+
+.planet-card__content {
+  grid-area: planet-card-content;
+  display: grid;
+  align-content: start;
+  gap: 24px;
+
+  &::before {
+    grid-row: 2;
+    content: "";
+    padding: 1px 0 0;
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+
+  @include t.breakpoint(l) {
+    & {
+      gap: 40px;
+    }
+  }
+}

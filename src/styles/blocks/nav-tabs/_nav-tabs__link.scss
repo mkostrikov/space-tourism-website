@@ -1,0 +1,36 @@
+.nav-tabs__link {
+  font-family: var(--font-family), sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #d0d6f9;
+  display: grid;
+  align-content: space-between;
+
+  &::after {
+    --gradient-color: #fff;
+    content: "";
+    padding: 3px 0 0;
+    background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    );
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 0 100%;
+    transition: background-size 300ms;
+  }
+
+  &[data-active="true"]::after {
+    background-image: linear-gradient(to right, #fff, #fff);
+    background-size: 100% 100%;
+  }
+
+  @media (hover: hover) {
+    &:hover::after {
+      background-size: 100% 100%;
+    }
+  }
+}

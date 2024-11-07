@@ -1,0 +1,23 @@
+@use "../../tools" as t;
+
+.planet-card__image-container {
+  grid-area: planet-card-image;
+  display: grid;
+  place-items: center;
+  padding: 26px 0;
+
+  & img {
+    inline-size: 100%;
+    block-size: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  @include t.breakpoint(m) {
+    padding: 42px 0;
+  }
+
+  @include t.breakpoint(l) {
+    padding: 0;
+  }
+}

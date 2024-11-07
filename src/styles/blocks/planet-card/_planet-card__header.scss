@@ -1,0 +1,13 @@
+@use "../../tools" as t;
+
+.planet-card__header {
+  text-align: center;
+  display: grid;
+  gap: 16px;
+
+  @include t.breakpoint(l) {
+    & {
+      text-align: left;
+    }
+  }
+}

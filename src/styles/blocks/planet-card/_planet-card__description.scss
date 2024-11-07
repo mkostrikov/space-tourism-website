@@ -1,0 +1,13 @@
+@use "../../tools" as t;
+
+.planet-card__description {
+  font-family: var(--third-family), sans-serif;
+  font-weight: 400;
+  font-size: clamp(
+    t.rem(15),
+    0.8714788732394366rem + 0.2816901408450704vw,
+    t.rem(18)
+  );
+  line-height: 1.8;
+  color: #d0d6f9;
+}
