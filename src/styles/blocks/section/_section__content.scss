@@ -1,0 +1,19 @@
+@use "../../tools" as t;
+
+.section__content {
+  grid-column: 1 / -1;
+  align-content: center;
+
+  @include t.breakpoint(m) {
+    & {
+      grid-column: 2 / -2;
+    }
+  }
+
+  @include t.breakpoint(l) {
+    & {
+      grid-column: 1 / -1;
+      min-block-size: 734px;
+    }
+  }
+}

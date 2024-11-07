@@ -1,0 +1,12 @@
+@use "../../tools" as t;
+
+.section__header {
+  grid-column: 1 / -1;
+  justify-content: center;
+
+  @include t.breakpoint(m) {
+    & {
+      justify-content: start;
+    }
+  }
+}
