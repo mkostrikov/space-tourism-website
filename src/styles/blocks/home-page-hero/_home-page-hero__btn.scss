@@ -18,6 +18,8 @@
   color: #0b0d17;
   grid-column: 1 / -1;
   margin: 119px 0;
+  display: grid;
+  place-items: center;
 
   @include t.breakpoint(m) {
     & {
