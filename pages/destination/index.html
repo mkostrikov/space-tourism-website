@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Space tourism</title>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="space tourism website" />
+
+    <link rel="icon" type="image/svg+xml" href="/space-tourism-website/favicon-32x32.png" />
+
+    <script type="module" crossorigin src="/space-tourism-website/assets/main-D4CHhDIk.js"></script>
+    <link rel="stylesheet" crossorigin href="/space-tourism-website/assets/main-Dv7UU9mf.css">
+  </head>
+  <body>
+    <div class="page destination-page">
+      <header class="header grid">
+        <div class="header__logo"></div>
+        <nav class="header__nav">
+          <ul class="main-nav">
+            <li class="main-nav__item">
+              <a href="../" class="main-nav__link">home</a>
+            </li>
+            <li class="main-nav__item">
+              <a data-active href="." class="main-nav__link">destination</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="../crew/" class="main-nav__link">crew</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="../technology/" class="main-nav__link">technology</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__menu">
+          <button class="header__menu-btn js-menu-open"></button>
+          <dialog class="menu js-menu">
+            <div class="menu__template">
+              <div class="menu__container">
+                <button class="menu__close-btn js-menu-close"></button>
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="../../" class="menu__link">home</a>
+                  </li>
+                  <li class="menu__item">
+                    <a data-active href="./" class="menu__link">destination</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="../crew/" class="menu__link">crew</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="../technology/" class="menu__link">technology</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </dialog>
+        </div>
+      </header>
+      <main class="main">
+        <section class="section grid">
+          <header class="section__header">
+            <h1 class="section__headline" data-page-number="01">
+              pick your destination
+            </h1>
+          </header>
+          <div class="section__content">
+            <article class="tabs js-tabs">
+              <div class="tabs__template planet-tabs-template">
+                <nav class="tabs__nav">
+                  <ul class="nav-tabs">
+                    <li class="nav-tabs__item">
+                      <button
+                        data-active="false"
+                        class="nav-tabs__link js-tabs-nav"
+                      >
+                        moon
+                      </button>
+                    </li>
+                    <li class="nav-tabs__item">
+                      <button
+                        data-active="false"
+                        class="nav-tabs__link js-tabs-nav"
+                      >
+                        mars
+                      </button>
+                    </li>
+                    <li class="nav-tabs__item">
+                      <button
+                        data-active="false"
+                        class="nav-tabs__link js-tabs-nav"
+                      >
+                        europa
+                      </button>
+                    </li>
+                    <li class="nav-tabs__item">
+                      <button
+                        data-active="false"
+                        class="nav-tabs__link js-tabs-nav"
+                      >
+                        titan
+                      </button>
+                    </li>
+                  </ul>
+                </nav>
+                <section
+                  data-active="false"
+                  class="tabs__card planet-card js-tabs-card"
+                >
+                  <div class="planet-card__image-container">
+                    <picture>
+                      <source
+                        media="(min-width: 1000px)"
+                        srcset="/space-tourism-website/assets/desktop-moon-COekvmFA.webp"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="/space-tourism-website/assets/tablet-moon-BUK6Vlsu.webp"
+                      />
+                      <img
+                        src="data:image/webp;base64,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"
+                        alt=""
+                        width="151"
+                        height="151"
+                      />
+                    </picture>
+                  </div>
+                  <div class="planet-card__content">
+                    <div class="planet-card__header">
+                      <h2 class="planet-card__headline">moon</h2>
+                      <p class="planet-card__description">
+                        See our planet as you’ve never seen it before. A perfect
+                        relaxing trip away to help regain perspective and come
+                        back refreshed. While you’re there, take in some history
+                        by visiting the Luna 2 and Apollo 11 landing sites.
+                      </p>
+                    </div>
+                    <div class="planet-card__info">
+                      <p class="planet-card__infoblock">
+                        <span>avg. distance</span>
+                        <span>384,400 km</span>
+                      </p>
+                      <p class="planet-card__infoblock">
+                        <span>est. travel time</span>
+                        <span>3 days</span>
+                      </p>
+                    </div>
+                  </div>
+                </section>
+                <section
+                  data-active="false"
+                  class="tabs__card planet-card js-tabs-card"
+                >
+                  <div class="planet-card__image-container">
+                    <picture>
+                      <source
+                        media="(min-width: 1000px)"
+                        srcset="/space-tourism-website/assets/desktop-mars-C9SeuuI5.webp"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="data:image/webp;base64,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"
+                      />
+                      <img
+                        src="data:image/webp;base64,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"
+                        alt=""
+                        width="151"
+                        height="150"
+                      />
+                    </picture>
+                  </div>
+                  <div class="planet-card__content">
+                    <div class="planet-card__header">
+                      <h2 class="planet-card__headline">mars</h2>
+                      <p class="planet-card__description">
+                        Don’t forget to pack your hiking boots. You’ll need them
+                        to tackle Olympus Mons, the tallest planetary mountain
+                        in our solar system. It’s two and a half times the size
+                        of Everest!
+                      </p>
+                    </div>
+                    <div class="planet-card__info">
+                      <p class="planet-card__infoblock">
+                        <span>avg. distance</span>
+                        <span>225 mil. km</span>
+                      </p>
+                      <p class="planet-card__infoblock">
+                        <span>est. travel time</span>
+                        <span>9 months</span>
+                      </p>
+                    </div>
+                  </div>
+                </section>
+                <section
+                  data-active="false"
+                  class="tabs__card planet-card js-tabs-card"
+                >
+                  <div class="planet-card__image-container">
+                    <picture>
+                      <source
+                        media="(min-width: 1000px)"
+                        srcset="/space-tourism-website/assets/desktop-europa-DCPpJLZj.webp"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="/space-tourism-website/assets/tablet-europa-Dl-rVM_D.webp"
+                      />
+                      <img
+                        src="data:image/webp;base64,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"
+                        alt=""
+                        width="151"
+                        height="151"
+                      />
+                    </picture>
+                  </div>
+                  <div class="planet-card__content">
+                    <div class="planet-card__header">
+                      <h2 class="planet-card__headline">europa</h2>
+                      <p class="planet-card__description">
+                        The smallest of the four Galilean moons orbiting
+                        Jupiter, Europa is a winter lover’s dream. With an icy
+                        surface, it’s perfect for a bit of ice skating, curling,
+                        hockey, or simple relaxation in your snug wintery cabin.
+                      </p>
+                    </div>
+                    <div class="planet-card__info">
+                      <p class="planet-card__infoblock">
+                        <span>avg. distance</span>
+                        <span>628 mil. km</span>
+                      </p>
+                      <p class="planet-card__infoblock">
+                        <span>est. travel time</span>
+                        <span>3 years</span>
+                      </p>
+                    </div>
+                  </div>
+                </section>
+                <section
+                  data-active="false"
+                  class="tabs__card planet-card js-tabs-card"
+                >
+                  <div class="planet-card__image-container">
+                    <picture>
+                      <source
+                        media="(min-width: 1000px)"
+                        srcset="/space-tourism-website/assets/desktop-titan-zufQov7i.webp"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="data:image/webp;base64,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"
+                      />
+                      <img
+                        src="data:image/webp;base64,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"
+                        alt=""
+                        width="151"
+                        height="150"
+                      />
+                    </picture>
+                  </div>
+                  <div class="planet-card__content">
+                    <div class="planet-card__header">
+                      <h2 class="planet-card__headline">titan</h2>
+                      <p class="planet-card__description">
+                        The only moon known to have a dense atmosphere other
+                        than Earth, Titan is a home away from home (just a few
+                        hundred degrees colder!). As a bonus, you get striking
+                        views of the Rings of Saturn.
+                      </p>
+                    </div>
+                    <div class="planet-card__info">
+                      <p class="planet-card__infoblock">
+                        <span>avg. distance</span>
+                        <span>1.6 bil. km</span>
+                      </p>
+                      <p class="planet-card__infoblock">
+                        <span>est. travel time</span>
+                        <span>7 years</span>
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
