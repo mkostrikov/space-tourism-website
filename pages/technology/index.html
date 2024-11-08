@@ -32,7 +32,30 @@
             </li>
           </ul>
         </nav>
-        <button class="header__menu"></button>
+        <div class="header__menu">
+          <button class="header__menu-btn js-menu-open"></button>
+          <dialog class="menu js-menu">
+            <div class="menu__template">
+              <div class="menu__container">
+                <button class="menu__close-btn js-menu-close"></button>
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="../../" class="menu__link">home</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="../destination/" class="menu__link">destination</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="../crew/" class="menu__link">crew</a>
+                  </li>
+                  <li class="menu__item">
+                    <a data-active href="./" class="menu__link">technology</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </dialog>
+        </div>
       </header>
       <main class="main">
         <section class="section grid">
