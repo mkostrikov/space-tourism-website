@@ -7,7 +7,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         home: join(dirname("."), "index.html"),
-        destination: join(dirname("."), "destination", "index.html"),
+        destination: join(dirname("."), "pages", "destination", "index.html"),
+        crew: join(dirname("."), "pages", "crew", "index.html"),
+        technology: join(dirname("."), "pages", "technology", "index.html"),
       },
     },
   },
