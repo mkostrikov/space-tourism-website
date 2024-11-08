@@ -1,0 +1,10 @@
+.menu__close-btn {
+  mask-image: url('data:image/svg+xml,<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21"><path fill="%23D0D6F9" d="m4.575.954 16.97 16.97-2.12 2.122L2.453 3.076z"/><path fill="%23D0D6F9" d="M2.454 17.925 19.424.955l2.122 2.12-16.97 16.971z"/></svg>');
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: #d0d6f9;
+  inline-size: 24px;
+  block-size: 21px;
+  justify-self: end;
+  margin: 32px 0;
+}

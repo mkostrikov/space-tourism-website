@@ -1,0 +1,20 @@
+@use "../../tools" as t;
+
+.technology-page {
+  background-image: url("/src/assets/images/technology-page/mobile-technology.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+
+  @include t.breakpoint(m) {
+    & {
+      background-image: url("/src/assets/images/technology-page/tablet-technology.webp");
+    }
+  }
+
+  @include t.breakpoint(l) {
+    & {
+      background-image: url("/src/assets/images/technology-page/desktop-technology.webp");
+    }
+  }
+}

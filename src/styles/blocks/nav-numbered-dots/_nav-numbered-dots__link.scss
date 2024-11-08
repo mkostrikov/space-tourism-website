@@ -1,0 +1,40 @@
+@use "../../tools" as t;
+
+.nav-numbered-dots__link {
+  grid-row: 1;
+  grid-column: 1;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 100%;
+  inline-size: 40px;
+  block-size: 40px;
+
+  & > span {
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  @include t.breakpoint(m) {
+    & {
+      inline-size: 56px;
+      block-size: 56px;
+    }
+  }
+
+  @include t.breakpoint(l) {
+    & {
+      inline-size: 80px;
+      block-size: 80px;
+    }
+  }
+
+  @media (hover: hover) {
+    & {
+      border: 1px solid rgba(255, 255, 255, 1);
+    }
+  }
+}

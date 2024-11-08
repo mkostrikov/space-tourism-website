@@ -1,0 +1,21 @@
+@use "../../tools" as t;
+
+.technology-card__image-container {
+  grid-area: technology-card-image;
+  margin: 64px calc((100vw - 100%) / -2) 0;
+  background-color:  #0b0d17;
+
+  & img {
+    inline-size: 100%;
+    block-size: auto;
+    object-fit: cover;
+    object-position: center;
+    mix-blend-mode: screen;
+  }
+
+  @include t.breakpoint(l) {
+    & {
+      margin: 64px 0;
+    }
+  }
+}

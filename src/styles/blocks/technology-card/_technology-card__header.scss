@@ -1,0 +1,16 @@
+@use "../../tools" as t;
+
+.technology-card__header {
+  grid-area: technology-card-header;
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  text-align: center;
+
+  @include t.breakpoint(l) {
+    & {
+      gap: 24px;
+      text-align: left;
+    }
+  }
+}

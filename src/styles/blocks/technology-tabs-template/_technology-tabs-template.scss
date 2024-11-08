@@ -1,0 +1,27 @@
+@use "../../tools" as t;
+
+.technology-tabs-template {
+  display: grid;
+  grid-template-rows: auto 32px 40px 40px auto;
+  grid-template-areas:
+    "technology-card-image"
+    "..."
+    "nav"
+    "..."
+    "technology-card-header";
+
+  @include t.breakpoint(m) {
+    & {
+      grid-template-rows: auto 32px 56px 40px auto;
+    }
+  }
+
+  @include t.breakpoint(l) {
+    & {
+      grid-template-columns: 80px 64px 500px 32px 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: "nav ... technology-card-header ... technology-card-image";
+      align-items: center;
+    }
+  }
+}

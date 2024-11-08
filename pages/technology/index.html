@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Space tourism</title>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="space tourism website" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon-32x32.png" />
+
+    <link rel="stylesheet" href="../../src/styles/main.scss" />
+    <script type="module" src="../../src/scripts/main.js"></script>
+  </head>
+  <body>
+    <div class="page technology-page">
+      <header class="header grid">
+        <div class="header__logo"></div>
+        <nav class="header__nav">
+          <ul class="main-nav">
+            <li class="main-nav__item">
+              <a href="../../" class="main-nav__link">home</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="../destination/" class="main-nav__link">destination</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="../crew/" class="main-nav__link">crew</a>
+            </li>
+            <li class="main-nav__item">
+              <a data-active href="./" class="main-nav__link">technology</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="header__menu"></button>
+      </header>
+      <main class="main">
+        <section class="section grid">
+          <header class="section__header">
+            <h1 class="section__headline" data-page-number="03">
+              space launch 101
+            </h1>
+          </header>
+          <div class="section__content">
+            <article class="tabs js-tabs">
+              <div class="tabs__template technology-tabs-template">
+                <nav class="tabs__nav">
+                  <ul class="nav-numbered-dots">
+                    <li class="nav-numbered-dots__item">
+                      <button
+                        data-active="false"
+                        class="nav-numbered-dots__link js-tabs-nav"
+                      >
+                        <span>launch vehicle</span>
+                      </button>
+                    </li>
+                    <li class="nav-numbered-dots__item">
+                      <button
+                        data-active="false"
+                        class="nav-numbered-dots__link js-tabs-nav"
+                      >
+                        <span>spaceport</span>
+                      </button>
+                    </li>
+                    <li class="nav-numbered-dots__item">
+                      <button
+                        data-active="false"
+                        class="nav-numbered-dots__link js-tabs-nav"
+                      >
+                        <span>space capsule</span>
+                      </button>
+                    </li>
+                  </ul>
+                </nav>
+                <section
+                  data-active="false"
+                  class="tabs__card technology-card js-tabs-card"
+                >
+                  <div class="technology-card__image-container">
+                    <picture>
+                      <source
+                        media="(min-width: 1000px)"
+                        srcset="
+                          ../../src/assets/images/technology/launch-vehicle-portrait-1020.webp
+                        "
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="
+                          ../../src/assets/images/technology/launch-vehicle-landscape-1020.webp
+                        "
+                      />
+                      <img
+                        src="../../src/assets/images/technology/launch-vehicle-landscape-782.webp"
+                        alt=""
+                        width="782"
+                        height="316"
+                        fetchpriority="high"
+                      />
+                    </picture>
+                  </div>
+                  <div class="technology-card__header">
+                    <h2 class="technology-card__headline">
+                      <span>the terminology...</span>
+                      <span>launch vehicle</span>
+                    </h2>
+                    <p class="technology-card__description">
+                      A launch vehicle or carrier rocket is a rocket-propelled
+                      vehicle used to carry a payload from Earth's surface to
+                      space, usually to Earth orbit or beyond. Our WEB-X carrier
+                      rocket is the most powerful in operation. Standing 150
+                      metres tall, it's quite an awe-inspiring sight on the
+                      launch pad!
+                    </p>
+                  </div>
+                </section>
+                <section
+                  data-active="false"
+                  class="tabs__card technology-card js-tabs-card"
+                >
+                  <div class="technology-card__image-container">
+                    <picture>
+                      <source
+                        media="(min-width: 1000px)"
+                        srcset="
+                          ../../src/assets/images/technology/spaceport-portrait-1020.webp
+                        "
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="
+                          ../../src/assets/images/technology/spaceport-landscape-1020.webp
+                        "
+                      />
+                      <img
+                        src="../../src/assets/images/technology/spaceport-landscape-782.webp"
+                        alt=""
+                        width="782"
+                        height="316"
+                      />
+                    </picture>
+                  </div>
+                  <div class="technology-card__header">
+                    <h2 class="technology-card__headline">
+                      <span>the terminology...</span>
+                      <span>spaceport</span>
+                    </h2>
+                    <p class="technology-card__description">
+                      A spaceport or cosmodrome is a site for launching (or
+                      receiving) spacecraft, by analogy to the seaport for ships
+                      or airport for aircraft. Based in the famous Cape
+                      Canaveral, our spaceport is ideally situated to take
+                      advantage of the Earth’s rotation for launch.
+                    </p>
+                  </div>
+                </section>
+                <section
+                  data-active="false"
+                  class="tabs__card technology-card js-tabs-card"
+                >
+                  <div class="technology-card__image-container">
+                    <picture>
+                      <source
+                        media="(min-width: 1000px)"
+                        srcset="
+                          ../../src/assets/images/technology/space-capsule-portrait-1020.webp
+                        "
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="
+                          ../../src/assets/images/technology/space-capsule-landscape-1020.webp
+                        "
+                      />
+                      <img
+                        src="../../src/assets/images/technology/space-capsule-landscape-782.webp"
+                        alt=""
+                        width="782"
+                        height="316"
+                      />
+                    </picture>
+                  </div>
+                  <div class="technology-card__header">
+                    <h2 class="technology-card__headline">
+                      <span>the terminology...</span>
+                      <span>space capsule</span>
+                    </h2>
+                    <p class="technology-card__description">
+                      A space capsule is an often-crewed spacecraft that uses a
+                      blunt-body reentry capsule to reenter the Earth's
+                      atmosphere without wings. Our capsule is where you'll
+                      spend your time during the flight. It includes a space
+                      gym, cinema, and plenty of other activities to keep you
+                      entertained.
+                    </p>
+                  </div>
+                </section>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

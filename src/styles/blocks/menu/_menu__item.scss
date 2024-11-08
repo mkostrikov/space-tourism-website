@@ -1,0 +1,16 @@
+.menu__item {
+  counter-increment: counter 1;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: center;
+
+  &::before {
+    content: counter(counter, decimal-leading-zero);
+    font-family: var(--font-family),sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.17em;
+    color: #fff;
+  }
+}

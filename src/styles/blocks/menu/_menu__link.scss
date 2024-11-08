@@ -1,0 +1,21 @@
+@use "../../tools" as t;
+
+.menu__link {
+  font-family: var(--font-family), sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 3px;
+  margin: 0 -24px 0 0;
+
+  &::after {
+    content: '';
+  }
+
+  &[data-active]::after {
+    background-color: #fff;
+  }
+}

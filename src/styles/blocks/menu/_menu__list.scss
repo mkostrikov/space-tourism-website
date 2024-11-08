@@ -1,0 +1,5 @@
+.menu__list {
+  counter-reset: counter -1;
+  display: grid;
+  gap: 32px;
+}

@@ -1,0 +1,23 @@
+@use "../../tools" as t;
+
+.technology-card__headline {
+  display: grid;
+  gap: 16px;
+
+  & > span {
+    font-size: clamp(
+      t.rem(24),
+      0.9285714285714286rem + 2.857142857142857vw,
+      t.rem(56)
+    );
+    font-family: var(--second-family), sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  & > span:first-of-type {
+    font-size: clamp(t.rem(18), 0.875rem + 1.25vw, t.rem(32));
+    opacity: 0.5;
+  }
+}

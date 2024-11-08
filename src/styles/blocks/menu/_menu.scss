@@ -1,0 +1,34 @@
+@use "../../tools" as t;
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  transition:
+    display 0.3s allow-discrete,
+    overlay 1s allow-discrete;
+  animation: close 0.1s forwards;
+
+  &[open] {
+    animation: open 0.5s forwards;
+  }
+
+  @keyframes open {
+    from {
+      right: -100%;
+    }
+    to {
+      right: 0;
+    }
+  }
+
+  @keyframes close {
+    from {
+      right: 0;
+    }
+    to {
+      right: -100%;
+    }
+  }
+}

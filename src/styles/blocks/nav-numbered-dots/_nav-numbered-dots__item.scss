@@ -1,0 +1,27 @@
+@use "../../tools" as t;
+
+.nav-numbered-dots__item {
+  counter-increment: counter 1;
+  display: grid;
+
+  &::before {
+    content: counter(counter);
+    grid-row: 1;
+    grid-column: 1;
+    display: grid;
+    place-items: center;
+    font-family: var(--second-family), sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.125rem, 0.875rem + 1.25vw, 2rem);
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 100%;
+  }
+
+  &:has(.nav-numbered-dots__link[data-active="true"])::before {
+    background-color: #fff;
+    color: #0b0d17;
+  }
+
+
+}
